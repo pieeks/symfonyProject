@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('dashboard')}}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('dashboard')}}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <header>
+            <h1>Dashboard Overview</h1>
+            <button class="add-item">Add Item</button>
+        </header>
+
+        <!-- Dashboard Cards -->
+        <div class="grid">
+            <div>
+                <h2>Users</h2>
+                <p>1,245 Active Users</p>
+            </div>
+            <div>
+                <h2>Revenue</h2>
+                <p>$12,450</p>
+            </div>
+            <div>
+                <h2>Support Tickets</h2>
+                <p>24 Open Tickets</p>
+            </div>
+        </div>
+
+        <!-- Placeholder Section -->
+        <section>
+            <h2>Recent Activity</h2>
+            <div>
+                <p>No recent activity.</p>
+            </div>
+        </section>
+    </div>
+{% endblock %}

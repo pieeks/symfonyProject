@@ -1,0 +1,84 @@
+/* app.css */
+
+/* Basis-Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    background-color: #1e293b;
+    color: white;
+    transition: width 0.3s ease, visibility 0.3s ease;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 256px; /* Default expanded width */
+  }
+  
+  /* Sidebar expanded/reduced states */
+  .sidebar.collapsed {
+    width: 64px; /* Reduced width for button and icons */
+  }
+  
+  /* Ensure Sidebar Content Visibility */
+  .sidebar.collapsed .sidebar-header,
+  .sidebar.collapsed .sidebar-footer,
+  .sidebar.collapsed nav {
+    display: none;
+  }
+  
+  /* Navigation Links */
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #3b82f6;
+  }
+  
+  /* Sidebar Button Styling */
+  #sidebar-toggle {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+  }
+  
+  #sidebar-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Sidebar Header/Footer */
+  .sidebar-header,
+  .sidebar-footer {
+    padding: 1rem;
+    background-color: #334155;
+    text-align: center;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 64px;
+    }
+  
+    .sidebar.expanded {
+      width: 192px;
+    }
+  }
+  
